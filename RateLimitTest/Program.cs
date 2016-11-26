@@ -55,8 +55,7 @@ namespace RateLimitTest
             {
                 display_name = display_name
             };
-            //var header = JsonConvert.SerializeObject(new { display_name = display_name });
-            //var content = new StringContent(header.ToString(), Encoding.UTF8, "application/json");
+
             HttpResponseMessage response = await client.PostAsJsonAsync("register", app);
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
